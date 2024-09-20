@@ -9,6 +9,7 @@ class ML_data:
     def drop_na(self):
         self.__features_df = self.__features_df.drop(index=self.__na_indexes)
         self.__class_df = self.__class_df.drop(index=self.__na_indexes)
+        return self
 
     def features(self, mode:int=4) -> pd.DataFrame: # dodac rozne zbiory
         v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
