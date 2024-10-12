@@ -15,7 +15,7 @@ class MatrixOperation:
 
     def matrix_conversion(self):
         """
-        Conversion of existing AMP database into more machine learning features set
+        Conversion of existing AMP database into machine learning features set
         :return: Dataframe of all needed features
         """
         new_df = pd.DataFrame(
@@ -68,6 +68,6 @@ class MatrixOperation:
 
 
 MO = MatrixOperation()
-# MO.matrix_conversion().to_csv("ML_AMP_features.csv")
-# MO.binary_labeling().to_csv('./ML_AMP_class.csv')
-# print(MO.ranking_of_labels())
+MO.matrix_conversion().to_csv("ML_AMP_features.csv")
+MO.binary_labeling().to_csv('./ML_AMP_class.csv')
+print(MO.ranking_of_labels())

@@ -15,11 +15,11 @@ import os
 #     3. 1+wlasciwosci fizyko chemiczne
 #     4. wszystko z poprzdnich(Najlepszy zestaw cech to 3)
 # 2. Zmodyfikowac architekture siecii neuronwej i przeprowadzic testy. 6 warstw, 30 wejsc->64->16->8->4->2->1
-> Crossvalidacja (1/2 zrobione)
-> Zrobic prace
-> Zmienic zmienne mlp na optymalne tanh_adam_(64, 32, 16, 8, 4, 2)
+# Zmienic zmienne mlp na optymalne tanh_adam_(64, 32, 16, 8, 4, 2)
 > przetstowanie parametrow svm
 > przestostowanie parametrow randomforest
+> Crossvalidacja (1/2 zrobione)
+> Zrobic prace
 3. Selekcja cech?
 
 CNN LSTM ->?

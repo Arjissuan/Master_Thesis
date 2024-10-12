@@ -11,7 +11,7 @@ class ML_data:
         self.__class_df = self.__class_df.drop(index=self.__na_indexes)
         return self
 
-    def features(self, mode:int=4) -> pd.DataFrame: # dodac rozne zbiory
+    def features(self, mode:int=2) -> pd.DataFrame: # dodac rozne zbiory
         v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
                   ['Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)']]
         temp = []
@@ -20,14 +20,15 @@ class ML_data:
                 if colname in column:
                     temp.append(column)
         v_sets[1] = temp
+        print(v_sets)
         if mode==1:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]+v_sets[1])
+            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]+v_sets[1]) #only % of aminacids
         elif mode==2:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[1])
+            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[1]) #%+physicochemical
         elif mode==3:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0])
+            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]) #%+biological
         elif mode==4:
-            return self.__features_df.drop(columns=["ID", "Sequence"])
+            return self.__features_df.drop(columns=["ID", "Sequence"]) #all
 
     def classes(self):
         classes_list = [self.__class_df['gram+'],
