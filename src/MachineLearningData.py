@@ -14,13 +14,14 @@ class ML_data:
     def features(self, mode:int=2) -> pd.DataFrame: # dodac rozne zbiory
         v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
                   ['Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)']]
+                #is organism is multi celled   #does it have tissues   #does it make mesoderm and stuff #third options informs if its not natural, maybe its better to not include them?
         temp = []
         for colname in v_sets[1]:
             for column in self.__features_df:
                 if colname in column:
                     temp.append(column)
         v_sets[1] = temp
-        print(v_sets)
+        # print(v_sets)
         if mode==1:
             return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]+v_sets[1]) #only % of aminacids
         elif mode==2:

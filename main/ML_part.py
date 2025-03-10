@@ -19,8 +19,9 @@ import os
 # przetstowanie parametrow svm
 # przestostowanie parametrow randomforest 400_40_log_loss_log2
 # Crossvalidacja 
+
 > Zrobic prace
-    >zapyatc sie o lokalizacje
+    >zapyatc sie o lokalizacje????
     >roziwnac metody
     >rozwinac wstep
 x C++ & pytorch -> deeplearning CNN LSTM
@@ -144,5 +145,8 @@ for j in (1,2,3,4):
     class_names = ['gram_plus', 'gram_minus', 'fungi', 'cancer', 'viruses']
     for i, dt in enumerate(statistics):
         df = pd.DataFrame(dt)
-        df.to_csv(f"./{j}/{class_names[i]}.csv", sep=',')
+        if os.path.exists(f"./ML_part_dataset_{j}") is False:
+            os.mkdir(f"./ML_part_dataset_{j}")
+
+        df.to_csv(f"./ML_part_dataset_{j}/{class_names[i]}.csv", sep=',')
 

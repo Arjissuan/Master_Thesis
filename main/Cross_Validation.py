@@ -9,15 +9,24 @@ from sklearn.model_selection import StratifiedShuffleSplit
 
 class KFold(ML_data):
     def __init__(self, n=10, t=0.7, r=42, m=2):
+        """
+        Initilization gives ready to use data for cross validation,
+        which can be performed using already implemented method.
+
+        :param n: number of splits
+        :param t: train size
+        :param r: random state
+        :param m: features mode look into, mode are sets of features, there are 4 sets numbered 1 to 4
+        """
         super().__init__()
         self.models = Models()
         self.drop_na()
         self.cross_val_data = list(map(lambda x:self.data_split(n, t, r, m, x), self.classes()))
 
 
-    def data_split(self, n:int, t:float, r:int, m:int, clss:pd.Series):
+    def data_split(self, n:int, t:float, r:int, m:int, clss:pd.Series)->str:
         """
-
+        Splits data for cross validation
         :param n: number of splits
         :param t: train size
         :param r: random state
@@ -34,6 +43,10 @@ class KFold(ML_data):
         return data_split
 
     def cross_validation(self):
+        """
+        Performs cross validation
+        :return: Message informing that process ended.
+        """
         if not os.path.exists("./cross_val/"):
             os.mkdir("./cross_val/")
 
