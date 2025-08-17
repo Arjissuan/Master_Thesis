@@ -5,16 +5,32 @@ from scipy import stats
 from scipy.stats import chi2_contingency, mannwhitneyu
 import matplotlib.patheffects as path_effects
 import seaborn as sn
-
+from src.MachineLearningData import ML_data
+from sklearn.feature_selection import RFE
 
 class StatisticalModule:
+
     def __init__(self, data: pd.DataFrame, label: pd.Series, alfa=0.05) -> None:
+        """
+
+        :param data: Dataframe of relevant features
+        :param label: Series of label that you want to test
+        :param alfa: alfa, set to 0.05
+        """
         self.data = data #
         self.label = label # explanatory variable
-        self.categorical = self.data.columns
-        self.numerical = self.data.columns
+        self.categorical = self.data.loc[:, self.data.dtypes==object].columns
+        self.numerical = self.data.loc[:, (self.data.dtypes!=object) & np.logical_not(self.data.isin([0,1]).all())].columns
+        self.binary = self.data.loc[:, (self.data.dtypes!=object) & (self.data.isin([0,1]).all())].columns
         self.alfa = alfa
         self.m = len(self.numerical)
+
+    def RecursiveFeatureElimination(self):
+        return None
+
+    def UnivariateFeatureSelection(self):
+        return NotImplemented
+
 
     def DescriptiveStatistics(self):
         statistic_df = pd.DataFrame([self.data.skew(axis='columns'),
@@ -53,9 +69,10 @@ class StatisticalModule:
         normalcy_table["Intepret"] = Intepret
         return normalcy_table
 
+    #checking variance equality
     def lavene(self):
         """
-        Use when data is not from not distribution
+        Use when data is not from normal distribution
         h0: All imput samples are from populations with equal variances
         ha: Not all imput samples are from populations with equal variances
         :return:
@@ -69,6 +86,7 @@ class StatisticalModule:
         lav_df["Interpretation"] = list(map(lambda x:("Failed to reject h0" if x>self.alfa else "rejceted h0"), lav_df["pvalue"]))
         return lav_df
 
+    #Multiple testing correction
     def bonferroni(self, p):
         return min(p*self.m, 1.0)
 
@@ -151,6 +169,13 @@ class StatisticalModule:
 
     def Corelations(self):
         corr_matrix = self.data.loc[:, self.numerical].corr()
-        dataplot = sn.heatmap(corr_matrix, cmap="YlGnBu", annot=True)
+        sn.heatmap(corr_matrix, cmap="YlGnBu", annot=True)
         plt.show()
-        return NotImplemented
+
+
+if __name__ == "__main__":
+    mld = ML_data()
+    SM = StatisticalModule(mld.features(4), mld.labels()[0], )
+    print(SM.numerical, SM.label)
+    SM.EffectSize()
+    SM.Corelations()

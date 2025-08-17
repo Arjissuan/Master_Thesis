@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     MLD = MachineLearningData.ML_data()
     MLD.drop_na()
-    X_train, X_test, y_train, y_test = train_test_split(MLD.features(mode=3), MLD.classes()[1], test_size=0.3,
+    X_train, X_test, y_train, y_test = train_test_split(MLD.features(mode=3), MLD.labels()[1], test_size=0.3,
                                                         random_state=14)
     data_pred = {"f1":[], "recall":[], "accuracy":[], 'precision':[]}
     col_names = []

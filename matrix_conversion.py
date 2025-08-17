@@ -38,7 +38,7 @@ class MatrixOperation:
         for col in ["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic", ]:
             new_df[col] = np.divide(self.df[col].copy() ,new_df["Length"])
 
-        for col in ['Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)']:
+        for col in ['Kingdom', 'Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)', 'Phyllum', 'Class']:
             temp_df = self.OneHotEncoder(col)
             new_df = pd.concat([new_df, temp_df], axis=1)
         return new_df.round(decimals=3)
@@ -62,12 +62,14 @@ class MatrixOperation:
         return df
 
     def ranking_of_labels(self):
-        df = pd.read_csv('./ML_AMP_class.csv', sep=',', index_col=0)
+        df = pd.read_csv('./ML_AMP_labels.csv', sep=',', index_col=0)
         sums = np.sum(df.iloc[:, 1:], axis=0)
         return sums
 
 
-MO = MatrixOperation()
-MO.matrix_conversion().to_csv("ML_AMP_features.csv")
-MO.binary_labeling().to_csv('./ML_AMP_class.csv')
-print(MO.ranking_of_labels())
+
+if __name__ == "__main__":
+    MO = MatrixOperation()
+    # MO.matrix_conversion().to_csv("ML_AMP_features.csv")
+    # MO.binary_labeling().to_csv('./ML_AMP_labels.csv')
+    print(MO.ranking_of_labels().shape)

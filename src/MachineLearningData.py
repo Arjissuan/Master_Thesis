@@ -1,41 +1,86 @@
 import pandas as pd
+from typing import List, Dict
+from src.LearningData import LData
 
-class ML_data:
-    def __init__(self):
-        self.__features_df = pd.read_csv("../ML_AMP_features.csv", sep=',', index_col=0)
-        self.__class_df = pd.read_csv(filepath_or_buffer="../ML_AMP_class.csv", sep=',', index_col=0)
-        self.__na_indexes = self.__features_df[(self.__features_df.isna() == True).any(axis=1)].index
+class ML_data(LData):
 
-    def drop_na(self):
-        self.__features_df = self.__features_df.drop(index=self.__na_indexes)
-        self.__class_df = self.__class_df.drop(index=self.__na_indexes)
-        return self
-
-    def features(self, mode:int=2) -> pd.DataFrame: # dodac rozne zbiory
+    def features(self, mode:int=3) -> pd.DataFrame: # dodac rozne zbiory
+        """
+        Method returns features datastet
+        :param mode: 1 for only % of aminoacids, 2 %+physicochemical, 3 %+evolutionary data, 4 all, 5 physicochemical+evol
+        :return: Specified dataset
+        """
         v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
-                  ['Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)']]
+                  ['Kingdom', 'Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)', 'Class'],
+                  ['Alanine', 'Arginine', 'Asparagine', 'Aspartic_Acid', 'Cysteine', 'Glutamic_Acid', 'Glutamine', 'Glycine', 'Histidine', 'Isoleucine', 'Leucine', 'Lysine', 'Mathionine', 'Phenylalanine', 'Proline', 'Serine', 'Threonine', 'Tryptophan', 'Tyrosine', 'Valine',]]
                 #is organism is multi celled   #does it have tissues   #does it make mesoderm and stuff #third options informs if its not natural, maybe its better to not include them?
         temp = []
         for colname in v_sets[1]:
-            for column in self.__features_df:
+            for column in self.features_df:
                 if colname in column:
                     temp.append(column)
         v_sets[1] = temp
-        # print(v_sets)
-        if mode==1:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]+v_sets[1]) #only % of aminacids
-        elif mode==2:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[1]) #%+physicochemical
-        elif mode==3:
-            return self.__features_df.drop(columns=["ID", "Sequence"]+v_sets[0]) #%+biological
-        elif mode==4:
-            return self.__features_df.drop(columns=["ID", "Sequence"]) #all
 
-    def classes(self):
-        classes_list = [self.__class_df['gram+'],
-                        self.__class_df['gram-'],
-                        self.__class_df['antifungal'],
-                        (self.__class_df["antitumor"] + self.__class_df["cancercells"] + self.__class_df['anticancer'] > 0),
-                        (self.__class_df["antiviral"] + self.__class_df['hiv'] + self.__class_df['hsv'] > 0)
-                        ]
-        return classes_list
+        if mode==1:
+            return self.features_df.drop(columns=["ID", "Sequence"]+v_sets[0]+v_sets[1]) #only % of aminacids
+        elif mode==2:
+            return self.features_df.drop(columns=["ID", "Sequence"]+v_sets[1]) #%+physicochemical
+        elif mode==3:
+            return self.features_df.drop(columns=["ID", "Sequence"]+v_sets[0]) #%+biological
+        elif mode==4:
+            return self.features_df.drop(columns=["ID", "Sequence"]) #all
+        elif mode==5:
+            return self.features_df.drop(columns=["ID", "Sequence"]+v_sets[2]) #no %.
+        else:
+            return "parameter mode: 1 for only % of aminoacids, 2 %+physicochemical, 3 %+evolutionary data, 4 all, 5 without %"
+
+
+    #cancer cannot harm organisms without tissues, that why I will exclude it
+    def __cancer_features(self, mode) -> pd.DataFrame:
+        cancer_features_df = self.features_df.loc[(self.features_df['Tissue (Yes, No)_YES'] == 1), :]
+
+        v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
+                  ['Kingdom', 'Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)',
+                   'Mouthparts(Pro-Deuter)', 'Class'],
+                  ['Alanine', 'Arginine', 'Asparagine', 'Aspartic_Acid', 'Cysteine', 'Glutamic_Acid', 'Glutamine',
+                   'Glycine', 'Histidine', 'Isoleucine', 'Leucine', 'Lysine', 'Mathionine', 'Phenylalanine', 'Proline',
+                   'Serine', 'Threonine', 'Tryptophan', 'Tyrosine', 'Valine', ]]
+        # is organism is multi celled   #does it have tissues   #does it make mesoderm and stuff #third options informs if its not natural, maybe its better to not include them?
+        temp = []
+        for colname in v_sets[1]:
+            for column in cancer_features_df:
+                if colname in column:
+                    temp.append(column)
+        v_sets[1] = temp
+
+        if mode == 1:
+            return cancer_features_df.drop(columns=["ID", "Sequence"] + v_sets[0] + v_sets[1])  # only % of aminacids
+        elif mode == 2:
+            return cancer_features_df.drop(columns=["ID", "Sequence"] + v_sets[1])  # %+physicochemical
+        elif mode == 3:
+            return cancer_features_df.drop(columns=["ID", "Sequence"] + v_sets[0])  # %+biological
+        elif mode == 4:
+            return cancer_features_df.drop(columns=["ID", "Sequence"])  # all
+        elif mode == 5:
+            return cancer_features_df.drop(columns=["ID", "Sequence"] + v_sets[2])  # no %.
+        else:
+            raise "parameter mode: 1 for only % of aminoacids, 2 %+physicochemical, 3 %+evolutionary data, 4 all, 5 without %"
+
+
+    def cancer_df(self, mode) -> Dict[str:pd.DataFrame, str:pd.Series]:
+        """
+
+        :param mode: 1 for only % of aminoacids, 2 %+physicochemical, 3 %+evolutionary data, 4 all, 5 physicochemical+evol
+        :return: Set of fetures
+        """
+        cancer_labels = self.labels_df["antitumor"] + self.labels_df["cancercells"] + self.labels_df['anticancer'] > 0
+        cancer_features = self.__cancer_features(mode=mode)
+
+        relevant_indexes = cancer_features.index
+
+
+        return {"features": cancer_features, "labels":cancer_labels.iloc[relevant_indexes]}
+
+
+
+

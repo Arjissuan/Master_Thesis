@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_sc
 if __name__ == "__main__":
     MLD = MachineLearningData.ML_data()
     MLD.drop_na()
-    X_train, X_test, y_train, y_test = train_test_split(MLD.features(mode=3), MLD.classes()[1], test_size=0.3,
+    X_train, X_test, y_train, y_test = train_test_split(MLD.features(mode=3), MLD.labels()[1], test_size=0.3,
                                                         random_state=14)
     kernels = ('linear', 'poly', 'rbf', 'sigmoid')
     gamma = ('auto', 'scale')

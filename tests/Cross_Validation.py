@@ -12,7 +12,7 @@ class KFold(ML_data):
         super().__init__()
         self.models = Models()
         self.drop_na()
-        self.cross_val_data = list(map(lambda x:self.data_split(n, t, r, m, x), self.classes()))
+        self.cross_val_data = list(map(lambda x:self.data_split(n, t, r, m, x), self.labels()))
 
 
     def data_split(self, n:int, t:float, r:int, m:int, clss:pd.Series):
