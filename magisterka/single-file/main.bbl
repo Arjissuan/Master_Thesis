@@ -1,0 +1,2269 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{bib:musser1995}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MJ}{%
+         family={Musser},
+         familyi={M\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJ1}
+    \strng{fullhash}{MJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1128/CMR.8.4.496
+    \endverb
+    \field{pages}{496\bibrangedash 514}
+    \field{title}{Antimicrobial agent resistance in mycobacteria: molecular
+  genetic insights . Antimicrobial Agent Resistance in Mycobacteria: Molecular
+  Genetic Insights}
+    \field{volume}{8}
+    \field{journaltitle}{Clinical microbiology reviews}
+    \field{month}{11}
+    \field{year}{1995}
+  \endentry
+
+  \entry{bib:lauj2018}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LJL}{%
+         family={Lau},
+         familyi={L\bibinitperiod},
+         given={Joanne\bibnamedelima L.},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=DMK}{%
+         family={Dunn},
+         familyi={D\bibinitperiod},
+         given={Michael\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LJLDMK1}
+    \strng{fullhash}{LJLDMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.bmc.2017.06.052
+    \endverb
+    \field{number}{10}
+    \field{pages}{2700\bibrangedash 2707}
+    \field{title}{Therapeutic peptides: Historical perspectives, current
+  development trends, and future directions}
+    \field{volume}{26}
+    \field{journaltitle}{Bioorganic \& Medicinal Chemistry}
+    \field{year}{2018}
+  \endentry
+
+  \entry{bib:otvos2016}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=OL}{%
+         family={Otvos},
+         familyi={O\bibinitperiod},
+         given={Laszlo},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{OL1}
+    \strng{fullhash}{OL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Methods in Molecular Biology}
+    \verb{doi}
+    \verb 10.1007/978-1-4939-3389-1_1
+    \endverb
+    \field{pages}{1\bibrangedash 8}
+    \field{title}{Peptide-based drug design: here and now}
+    \field{volume}{1405}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:kaspar2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KAA}{%
+         family={Kaspar},
+         familyi={K\bibinitperiod},
+         given={Angela\bibnamedelima A.},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RJM}{%
+         family={Reichert},
+         familyi={R\bibinitperiod},
+         given={Janice\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KAARJM1}
+    \strng{fullhash}{KAARJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.drudis.2013.05.011
+    \endverb
+    \field{number}{17-18}
+    \field{pages}{807\bibrangedash 817}
+    \field{title}{Future directions for peptide therapeutics development}
+    \field{volume}{18}
+    \field{journaltitle}{Drug Discovery Today}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bib:hancock2006}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HREW}{%
+         family={Hancock},
+         familyi={H\bibinitperiod},
+         given={Robert E.\bibnamedelima W.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=SHG}{%
+         family={Sahl},
+         familyi={S\bibinitperiod},
+         given={Hans-Georg},
+         giveni={H\bibinithyphendelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HREWSHG1}
+    \strng{fullhash}{HREWSHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nbt1267
+    \endverb
+    \field{number}{12}
+    \field{pages}{1551\bibrangedash 1557}
+    \field{title}{Antimicrobial and host-defense peptides as new anti-infective
+  therapeutic strategies}
+    \field{volume}{24}
+    \field{journaltitle}{Nature Biotechnology}
+    \field{year}{2006}
+  \endentry
+
+  \entry{bib:mahlapuu2016}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MM}{%
+         family={Mahlapuu},
+         familyi={M\bibinitperiod},
+         given={Margit},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Håkansson},
+         familyi={H\bibinitperiod},
+         given={Johanna},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RL}{%
+         family={Ringstad},
+         familyi={R\bibinitperiod},
+         given={Lovisa},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Björn},
+         familyi={B\bibinitperiod},
+         given={Claes},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MMHJRLBC1}
+    \strng{fullhash}{MMHJRLBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3389/fcimb.2016.00194
+    \endverb
+    \field{pages}{194}
+    \field{title}{Antimicrobial peptides: an emerging category of therapeutic
+  agents}
+    \field{volume}{6}
+    \field{journaltitle}{Frontiers in Cellular and Infection Microbiology}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:wang2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Gaoxing},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Xia},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhe},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WGLXWZ1}
+    \strng{fullhash}{WGLXWZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1111/omi.12175
+    \endverb
+    \field{number}{1}
+    \field{pages}{3\bibrangedash 16}
+    \field{title}{Antimicrobial peptides: Promising alternatives in the post
+  feeding antibiotic era}
+    \field{volume}{31}
+    \field{journaltitle}{Molecular Oral Microbiology}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:mansour2014}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MSC}{%
+         family={Mansour},
+         familyi={M\bibinitperiod},
+         given={Suzanne\bibnamedelima C.},
+         giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=POM}{%
+         family={Pena},
+         familyi={P\bibinitperiod},
+         given={Omid\bibnamedelima M.},
+         giveni={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HREW}{%
+         family={Hancock},
+         familyi={H\bibinitperiod},
+         given={Robert E.\bibnamedelima W.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MSCPOMHREW1}
+    \strng{fullhash}{MSCPOMHREW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.it.2014.07.004
+    \endverb
+    \field{number}{9}
+    \field{pages}{443\bibrangedash 450}
+    \field{title}{Host defense peptides: Front-line immunomodulators}
+    \field{volume}{35}
+    \field{journaltitle}{Trends in Immunology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{bib:fjell2012}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FCD}{%
+         family={Fjell},
+         familyi={F\bibinitperiod},
+         given={Christopher\bibnamedelima D.},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=HJA}{%
+         family={Hiss},
+         familyi={H\bibinitperiod},
+         given={Jan\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HREW}{%
+         family={Hancock},
+         familyi={H\bibinitperiod},
+         given={Robert E.\bibnamedelima W.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={Gisbert},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCDHJAHREWSG1}
+    \strng{fullhash}{FCDHJAHREWSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nrd3591
+    \endverb
+    \field{number}{1}
+    \field{pages}{37\bibrangedash 51}
+    \field{title}{Designing antimicrobial peptides: form follows function}
+    \field{volume}{11}
+    \field{journaltitle}{Nature Reviews Drug Discovery}
+    \field{year}{2012}
+  \endentry
+
+  \entry{bib:wang2014}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Gaoxing},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WG1}
+    \strng{fullhash}{WG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/ph7050545
+    \endverb
+    \field{number}{5}
+    \field{pages}{545\bibrangedash 594}
+    \field{title}{Human antimicrobial peptides and proteins}
+    \field{volume}{7}
+    \field{journaltitle}{Pharmaceuticals}
+    \field{year}{2014}
+  \endentry
+
+  \entry{bib:cotter2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CPD}{%
+         family={Cotter},
+         familyi={C\bibinitperiod},
+         given={Paul\bibnamedelima D.},
+         giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=RRP}{%
+         family={Ross},
+         familyi={R\bibinitperiod},
+         given={R.\bibnamedelima Paul},
+         giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hill},
+         familyi={H\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CPDRRPHC1}
+    \strng{fullhash}{CPDRRPHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nrmicro2937
+    \endverb
+    \field{number}{2}
+    \field{pages}{95\bibrangedash 105}
+    \field{title}{Bacteriocins — a viable alternative to antibiotics?}
+    \field{volume}{11}
+    \field{journaltitle}{Nature Reviews Microbiology}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bib:tam2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TJP}{%
+         family={Tam},
+         familyi={T\bibinitperiod},
+         given={James\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Shuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WKW}{%
+         family={Wong},
+         familyi={W\bibinitperiod},
+         given={Ka-Wing},
+         giveni={K\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=TWK}{%
+         family={Tan},
+         familyi={T\bibinitperiod},
+         given={Wan-Kok},
+         giveni={W\bibinithyphendelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TJPWSWKWTWK1}
+    \strng{fullhash}{TJPWSWKWTWK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/ph8040711
+    \endverb
+    \field{number}{4}
+    \field{pages}{711\bibrangedash 757}
+    \field{title}{Plant antimicrobial peptides: Structure, biological functions
+  and applications}
+    \field{volume}{8}
+    \field{journaltitle}{Pharmaceuticals}
+    \field{year}{2015}
+  \endentry
+
+  \entry{bib:yi2014}{article}{}
+    \name{author}{6}{}{%
+      {{hash=YH}{%
+         family={Yi},
+         familyi={Y\bibinitperiod},
+         given={Hyeon},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CSM}{%
+         family={Chowdhury},
+         familyi={C\bibinitperiod},
+         given={Sanjida\bibnamedelima M.},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Xiaojing},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yufei},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Jie},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YHCSMHYYXWYZJ1}
+    \strng{fullhash}{YHCSMHYYXWYZJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s00253-014-5792-6
+    \endverb
+    \field{number}{13}
+    \field{pages}{5807\bibrangedash 5822}
+    \field{title}{Insect antimicrobial peptides and their applications}
+    \field{volume}{98}
+    \field{journaltitle}{Applied Microbiology and Biotechnology}
+    \field{year}{2014}
+  \endentry
+
+  \entry{bib:conlon2011}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CJM}{%
+         family={Conlon},
+         familyi={C\bibinitperiod},
+         given={J.\bibnamedelima Michael},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJM1}
+    \strng{fullhash}{CJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s00441-010-1014-4
+    \endverb
+    \field{number}{1}
+    \field{pages}{201\bibrangedash 212}
+    \field{title}{The contribution of skin antimicrobial peptides to the system
+  of innate immunity in anurans}
+    \field{volume}{343}
+    \field{journaltitle}{Cell and Tissue Research}
+    \field{year}{2011}
+  \endentry
+
+  \entry{bib:zanetti2004}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZM}{%
+         family={Zanetti},
+         familyi={Z\bibinitperiod},
+         given={Maurizio},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZM1}
+    \strng{fullhash}{ZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1189/jlb.0403147
+    \endverb
+    \field{number}{1}
+    \field{pages}{39\bibrangedash 48}
+    \field{title}{Cathelicidins, multifunctional peptides of the innate
+  immunity}
+    \field{volume}{75}
+    \field{journaltitle}{Journal of Leukocyte Biology}
+    \field{year}{2004}
+  \endentry
+
+  \entry{bib:li2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LC}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Chunhua},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BHM}{%
+         family={Blencke},
+         familyi={B\bibinitperiod},
+         given={Hans-Michael},
+         giveni={H\bibinithyphendelim M\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Haug},
+         familyi={H\bibinitperiod},
+         given={Tor},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Stensvåg},
+         familyi={S\bibinitperiod},
+         given={Klara},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LCBHMHTSK1}
+    \strng{fullhash}{LCBHMHTSK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3390/md17100579
+    \endverb
+    \field{number}{10}
+    \field{pages}{579}
+    \field{title}{Marine antimicrobial peptides: The treasure trove of
+  promising therapeutic agents}
+    \field{volume}{17}
+    \field{journaltitle}{Marine Drugs}
+    \field{year}{2019}
+  \endentry
+
+  \entry{bib:edman1967}{article}{}
+    \name{author}{2}{}{%
+      {{hash=EP}{%
+         family={Edman},
+         familyi={E\bibinitperiod},
+         given={Pehr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Begg},
+         familyi={B\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EPBG1}
+    \strng{fullhash}{EPBG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1111/j.1432-1033.1967.tb00065.x
+    \endverb
+    \field{number}{1}
+    \field{pages}{80\bibrangedash 91}
+    \field{title}{A protein sequenator}
+    \field{volume}{1}
+    \field{journaltitle}{European Journal of Biochemistry}
+    \field{year}{1967}
+  \endentry
+
+  \entry{bib:aebersold2016}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AR}{%
+         family={Aebersold},
+         familyi={A\bibinitperiod},
+         given={Ruedi},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mann},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ARMM1}
+    \strng{fullhash}{ARMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nature19949
+    \endverb
+    \field{number}{7620}
+    \field{pages}{347\bibrangedash 355}
+    \field{title}{Mass-spectrometric exploration of proteome structure and
+  function}
+    \field{volume}{537}
+    \field{journaltitle}{Nature}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:sanger1977}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SF}{%
+         family={Sanger},
+         familyi={S\bibinitperiod},
+         given={Frederick},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=NA}{%
+         family={Nicklen},
+         familyi={N\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CAR}{%
+         family={Coulson},
+         familyi={C\bibinitperiod},
+         given={Alan\bibnamedelima R.},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SFNACAR1}
+    \strng{fullhash}{SFNACAR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1073/pnas.74.12.5463
+    \endverb
+    \field{number}{12}
+    \field{pages}{5463\bibrangedash 5467}
+    \field{title}{DNA sequencing with chain-terminating inhibitors}
+    \field{volume}{74}
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{1977}
+  \endentry
+
+  \entry{bib:goodwin2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GS}{%
+         family={Goodwin},
+         familyi={G\bibinitperiod},
+         given={Sara},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MJD}{%
+         family={McPherson},
+         familyi={M\bibinitperiod},
+         given={John\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=MWR}{%
+         family={McCombie},
+         familyi={M\bibinitperiod},
+         given={W.\bibnamedelima Richard},
+         giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GSMJDMWR1}
+    \strng{fullhash}{GSMJDMWR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nrg.2016.49
+    \endverb
+    \field{number}{6}
+    \field{pages}{333\bibrangedash 351}
+    \field{title}{Coming of age: ten years of next-generation sequencing
+  technologies}
+    \field{volume}{17}
+    \field{journaltitle}{Nature Reviews Genetics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:nayfach2016}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NS}{%
+         family={Nayfach},
+         familyi={N\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PKS}{%
+         family={Pollard},
+         familyi={P\bibinitperiod},
+         given={Katherine\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NSPKS1}
+    \strng{fullhash}{NSPKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.cell.2016.08.007
+    \endverb
+    \field{number}{5}
+    \field{pages}{1103\bibrangedash 1116}
+    \field{title}{Toward accurate and quantitative comparative metagenomics}
+    \field{volume}{166}
+    \field{journaltitle}{Cell}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:pirtskhalava2021}{article}{}
+    \name{author}{6}{}{%
+      {{hash=PM}{%
+         family={Pirtskhalava},
+         familyi={P\bibinitperiod},
+         given={Malakmadze},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gabrielian},
+         familyi={G\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CP}{%
+         family={Cruz},
+         familyi={C\bibinitperiod},
+         given={Pablo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GHL}{%
+         family={Griggs},
+         familyi={G\bibinitperiod},
+         given={Heather\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SRB}{%
+         family={Squires},
+         familyi={S\bibinitperiod},
+         given={R.\bibnamedelima Brian},
+         giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=HDE}{%
+         family={Hurt},
+         familyi={H\bibinitperiod},
+         given={Darrell\bibnamedelima E.},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PMGACPGHLSRBHDE1}
+    \strng{fullhash}{PMGACPGHLSRBHDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/nar/gkaa991
+    \endverb
+    \field{number}{D1}
+    \field{pages}{D288\bibrangedash D297}
+    \field{title}{DBAASP v3: Database of Antimicrobial/Cytotoxic Activity and
+  Structure of Peptides}
+    \field{volume}{49}
+    \field{journaltitle}{Nucleic Acids Research}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bib:wang2016_apd}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Guangshun},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Xia},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhe},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WGLXWZ2}
+    \strng{fullhash}{WGLXWZ2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/nar/gkv1278
+    \endverb
+    \field{number}{D1}
+    \field{pages}{D1087\bibrangedash D1093}
+    \field{title}{APD3: The Antimicrobial Peptide Database as a tool for
+  research and education}
+    \field{volume}{44}
+    \field{journaltitle}{Nucleic Acids Research}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:kang2019}{article}{}
+    \name{author}{10}{}{%
+      {{hash=KX}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Xi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=DF}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Faming},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Chun},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Sha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Jiongyu},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hongyu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XH}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Hui},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Lao},
+         familyi={L\bibinitperiod},
+         given={Xuejun},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Hong},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KXDFSCLSSJCJLHXHLXZH1}
+    \strng{fullhash}{KXDFSCLSSJCJLHXHLXZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41597-019-0154-y
+    \endverb
+    \field{number}{1}
+    \field{pages}{148}
+    \field{title}{DRAMP 2.0, an updated data repository of antimicrobial
+  peptides}
+    \field{volume}{6}
+    \field{journaltitle}{Scientific Data}
+    \field{year}{2019}
+  \endentry
+
+  \entry{bib:laxminarayan2013}{article}{}
+    \name{author}{26}{}{%
+      {{hash=LR}{%
+         family={Laxminarayan},
+         familyi={L\bibinitperiod},
+         given={Ramanan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Duse},
+         familyi={D\bibinitperiod},
+         given={Adriano},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Wattal},
+         familyi={W\bibinitperiod},
+         given={Chand},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZAKM}{%
+         family={Zaidi},
+         familyi={Z\bibinitperiod},
+         given={Anita K.\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+      }}%
+      {{hash=WHFL}{%
+         family={Wertheim},
+         familyi={W\bibinitperiod},
+         given={Heiman F.\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim
+  L\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Sumpradit},
+         familyi={S\bibinitperiod},
+         given={Nithima},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=VE}{%
+         family={Vlieghe},
+         familyi={V\bibinitperiod},
+         given={Erika},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hara},
+         familyi={H\bibinitperiod},
+         given={Glenys},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GIM}{%
+         family={Gould},
+         familyi={G\bibinitperiod},
+         given={Ian\bibnamedelima M.},
+         giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Goossens},
+         familyi={G\bibinitperiod},
+         given={Herman},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Greko},
+         familyi={G\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SAD}{%
+         family={So},
+         familyi={S\bibinitperiod},
+         given={Anthony\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bigdeli},
+         familyi={B\bibinitperiod},
+         given={Maryam},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TG}{%
+         family={Tomson},
+         familyi={T\bibinitperiod},
+         given={Goran},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={Woodhouse},
+         familyi={W\bibinitperiod},
+         given={Will},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=OE}{%
+         family={Ombaka},
+         familyi={O\bibinitperiod},
+         given={Emmanuel},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=PAQ}{%
+         family={Peralta},
+         familyi={P\bibinitperiod},
+         given={Ana\bibnamedelima Q.},
+         giveni={A\bibinitperiod\bibinitdelim Q\bibinitperiod},
+      }}%
+      {{hash=QFN}{%
+         family={Qamar},
+         familyi={Q\bibinitperiod},
+         given={Furrukh\bibnamedelima N.},
+         giveni={F\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Mir},
+         familyi={M\bibinitperiod},
+         given={Farah},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kariuki},
+         familyi={K\bibinitperiod},
+         given={Samuel},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BZA}{%
+         family={Bhutta},
+         familyi={B\bibinitperiod},
+         given={Zulfiqar\bibnamedelima A.},
+         giveni={Z\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Coates},
+         familyi={C\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bergstrom},
+         familyi={B\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WGD}{%
+         family={Wright},
+         familyi={W\bibinitperiod},
+         given={Gerard\bibnamedelima D.},
+         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BED}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Eric\bibnamedelima D.},
+         giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=CO}{%
+         family={Cars},
+         familyi={C\bibinitperiod},
+         given={Otto},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+  \strng{namehash}{LRDAWCZAKMWHFLSNVEHGGIMGHGCSADBMTGWWOEPAQQFNMFKSBZACABRWGDBEDCO1}
+  \strng{fullhash}{LRDAWCZAKMWHFLSNVEHGGIMGHGCSADBMTGWWOEPAQQFNMFKSBZACABRWGDBEDCO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/S1473-3099(13)70318-9
+    \endverb
+    \field{number}{12}
+    \field{pages}{1057\bibrangedash 1098}
+    \field{title}{Antibiotic resistance—the need for global solutions}
+    \field{volume}{13}
+    \field{journaltitle}{The Lancet Infectious Diseases}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bib:felicio2017}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FMR}{%
+         family={Felício},
+         familyi={F\bibinitperiod},
+         given={M.\bibnamedelima R.},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SON}{%
+         family={Silva},
+         familyi={S\bibinitperiod},
+         given={O.\bibnamedelima N.},
+         giveni={O\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gonçalves},
+         familyi={G\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SNC}{%
+         family={Santos},
+         familyi={S\bibinitperiod},
+         given={N.\bibnamedelima C.},
+         giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=FOL}{%
+         family={Franco},
+         familyi={F\bibinitperiod},
+         given={O.\bibnamedelima L.},
+         giveni={O\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FMRSONGSSNCFOL1}
+    \strng{fullhash}{FMRSONGSSNCFOL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3389/fchem.2017.00005
+    \endverb
+    \field{pages}{5}
+    \field{title}{Peptides with dual antimicrobial and anticancer activities}
+    \field{volume}{5}
+    \field{journaltitle}{Frontiers in Chemistry}
+    \field{year}{2017}
+  \endentry
+
+  \entry{bib:perisic2025}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PO}{%
+         family={Perišić},
+         familyi={P\bibinitperiod},
+         given={O.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=SBC}{%
+         family={Sevim\bibnamedelima Bayrak},
+         familyi={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GMK}{%
+         family={Gunady},
+         familyi={G\bibinitperiod},
+         given={M.\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{POSBCGMK1}
+    \strng{fullhash}{POSBCGMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3389/fmolb.2025.1568437
+    \endverb
+    \field{pages}{1568437}
+    \field{title}{Machine learning in computer-aided drug design}
+    \verb{url}
+    \verb https://www.frontiersin.org/journals/molecular-biosciences/articles/1
+    \verb 0.3389/fmolb.2025.1568437/full
+    \endverb
+    \field{volume}{12}
+    \field{journaltitle}{Frontiers in Molecular Biosciences}
+    \field{year}{2025}
+  \endentry
+
+  \entry{bib:kang2019features}{article}{}
+    \name{author}{10}{}{%
+      {{hash=KX}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Xi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=DF}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Faming},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Chun},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Sha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Jiongyu},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hongyu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=XH}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Hui},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Lao},
+         familyi={L\bibinitperiod},
+         given={Xuejun},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZH}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Hong},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KXDFSCLSSJCJLHXHLXZH1}
+    \strng{fullhash}{KXDFSCLSSJCJLHXHLXZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41597-019-0154-y
+    \endverb
+    \field{number}{1}
+    \field{pages}{148}
+    \field{title}{DRAMP 2.0, an updated data repository of antimicrobial
+  peptides}
+    \field{volume}{6}
+    \field{journaltitle}{Scientific Data}
+    \field{year}{2019}
+  \endentry
+
+  \entry{bib:agrawal2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=AP}{%
+         family={Agrawal},
+         familyi={A\bibinitperiod},
+         given={Pankaj},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bhalla},
+         familyi={B\bibinitperiod},
+         given={Shreshth},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chaudhary},
+         familyi={C\bibinitperiod},
+         given={Kamal},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Rajesh},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Manish},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RGPS}{%
+         family={Raghava},
+         familyi={R\bibinitperiod},
+         given={Gajendra P.\bibnamedelima S.},
+         giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{APBSCKKRSMRGPS1}
+    \strng{fullhash}{APBSCKKRSMRGPS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.3389/fmicb.2020.00123
+    \endverb
+    \field{pages}{123}
+    \field{title}{AMPfun: Sequence-based prediction of antimicrobial peptides
+  using physicochemical properties and random forest}
+    \field{volume}{11}
+    \field{journaltitle}{Frontiers in Microbiology}
+    \field{year}{2020}
+  \endentry
+
+  \entry{bib:meher2017}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MPK}{%
+         family={Meher},
+         familyi={M\bibinitperiod},
+         given={Prateek\bibnamedelima K.},
+         giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=STK}{%
+         family={Sahu},
+         familyi={S\bibinitperiod},
+         given={Tanmaya\bibnamedelima K.},
+         giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Saini},
+         familyi={S\bibinitperiod},
+         given={Vikas},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RAR}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={A.\bibnamedelima R.},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MPKSTKSVRAR1}
+    \strng{fullhash}{MPKSTKSVRAR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/srep42362
+    \endverb
+    \field{number}{1}
+    \field{pages}{42362}
+    \field{title}{Predicting antimicrobial peptides with improved accuracy by
+  incorporating the compositional, physicochemical and structural features into
+  Chou’s general PseAAC}
+    \field{volume}{7}
+    \field{journaltitle}{Scientific Reports}
+    \field{year}{2017}
+  \endentry
+
+  \entry{bib:dziuba2022}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DP}{%
+         family={Dziuba},
+         familyi={D\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kowalski},
+         familyi={K\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dziuba},
+         familyi={D\bibinitperiod},
+         given={Marta},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPKADM1}
+    \strng{fullhash}{DPKADM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bib/bbac430
+    \endverb
+    \field{number}{6}
+    \field{pages}{bbac430}
+    \field{title}{Advances in feature engineering for peptide classification
+  and functional prediction}
+    \field{volume}{23}
+    \field{journaltitle}{Briefings in Bioinformatics}
+    \field{year}{2022}
+  \endentry
+
+  \entry{bib:li2022}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hong},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WQ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Qiang},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yuting},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LHWQZYLX1}
+    \strng{fullhash}{LHWQZYLX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bib/bbac118
+    \endverb
+    \field{number}{3}
+    \field{pages}{bbac118}
+    \field{title}{Comprehensive evaluation of feature selection methods for
+  antimicrobial peptide prediction}
+    \field{volume}{23}
+    \field{journaltitle}{Briefings in Bioinformatics}
+    \field{year}{2022}
+  \endentry
+
+  \entry{bib:fjell2011}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FCD}{%
+         family={Fjell},
+         familyi={F\bibinitperiod},
+         given={Christopher\bibnamedelima D.},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=HJA}{%
+         family={Hiss},
+         familyi={H\bibinitperiod},
+         given={Jan\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HREW}{%
+         family={Hancock},
+         familyi={H\bibinitperiod},
+         given={Robert E.\bibnamedelima W.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  W\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Schneider},
+         familyi={S\bibinitperiod},
+         given={Gisbert},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCDHJAHREWSG1}
+    \strng{fullhash}{FCDHJAHREWSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/nrd3591
+    \endverb
+    \field{number}{1}
+    \field{pages}{37\bibrangedash 51}
+    \field{title}{Designing antimicrobial peptides: form follows function}
+    \field{volume}{11}
+    \field{journaltitle}{Nature Reviews Drug Discovery}
+    \field{year}{2011}
+  \endentry
+
+  \entry{bib:mishra2022}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MB}{%
+         family={Mishra},
+         familyi={M\bibinitperiod},
+         given={Bhavan},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Guangshun},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MBWG1}
+    \strng{fullhash}{MBWG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.csbj.2022.07.028
+    \endverb
+    \field{pages}{4211\bibrangedash 4224}
+    \field{title}{Machine learning in antimicrobial peptides: advances and
+  prospects}
+    \field{volume}{20}
+    \field{journaltitle}{Computational and Structural Biotechnology Journal}
+    \field{year}{2022}
+  \endentry
+
+  \entry{bib:zhang2021}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZW}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Lei},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Xu},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Zhi},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZWCLYXLZ1}
+    \strng{fullhash}{ZWCLYXLZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TCBB.2020.2999512
+    \endverb
+    \field{number}{6}
+    \field{pages}{2563\bibrangedash 2574}
+    \field{title}{Dimensionality reduction for bioinformatics data:
+  Applications in antimicrobial peptide prediction}
+    \field{volume}{18}
+    \field{journaltitle}{IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bib:xiao2013}{article}{}
+    \name{author}{5}{}{%
+      {{hash=XX}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Xuan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Pu},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LWZ}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Wen-Zhang},
+         giveni={W\bibinithyphendelim Z\bibinitperiod},
+      }}%
+      {{hash=JJ}{%
+         family={Jia},
+         familyi={J\bibinitperiod},
+         given={Jinwen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CKC}{%
+         family={Chou},
+         familyi={C\bibinitperiod},
+         given={Kuo-Chen},
+         giveni={K\bibinithyphendelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XXWPLWZJJCKC1}
+    \strng{fullhash}{XXWPLWZJJCKC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.ab.2013.01.019
+    \endverb
+    \field{number}{2}
+    \field{pages}{168\bibrangedash 177}
+    \field{title}{iAMP-2L: a two-level multi-label classifier for identifying
+  antimicrobial peptides and their functional types}
+    \field{volume}{436}
+    \field{journaltitle}{Analytical Biochemistry}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bib:torres2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TMDT}{%
+         family={Torres},
+         familyi={T\bibinitperiod},
+         given={Maria D.\bibnamedelima T.},
+         giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  T\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sothiselvam},
+         familyi={S\bibinitperiod},
+         given={Subha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LTK}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Timothy\bibnamedelima K.},
+         giveni={T\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=dlFNC}{%
+         prefix={de\bibnamedelima la},
+         prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod},
+         family={Fuente-Nunez},
+         familyi={F\bibinithyphendelim N\bibinitperiod},
+         given={Cesar},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TMDTSSLTKdlFNC1}
+    \strng{fullhash}{TMDTSSLTKdlFNC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bioinformatics/bty356
+    \endverb
+    \field{number}{19}
+    \field{pages}{3396\bibrangedash 3405}
+    \field{title}{Antimicrobial activity prediction with random forests and
+  physicochemical descriptors}
+    \field{volume}{34}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2018}
+  \endentry
+
+  \entry{bib:veltri2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=VD}{%
+         family={Veltri},
+         familyi={V\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KU}{%
+         family={Kamath},
+         familyi={K\bibinitperiod},
+         given={Ujwal},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Shehu},
+         familyi={S\bibinitperiod},
+         given={Amarda},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VDKUSA1}
+    \strng{fullhash}{VDKUSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bioinformatics/bty179
+    \endverb
+    \field{number}{16}
+    \field{pages}{2740\bibrangedash 2747}
+    \field{title}{Deep learning improves antimicrobial peptide recognition}
+    \field{volume}{34}
+    \field{journaltitle}{Bioinformatics}
+    \field{year}{2018}
+  \endentry
+
+  \entry{bib:cortes1995}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CC}{%
+         family={Cortes},
+         familyi={C\bibinitperiod},
+         given={Corinna},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vapnik},
+         familyi={V\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CCVV1}
+    \strng{fullhash}{CCVV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/BF00994018
+    \endverb
+    \field{number}{3}
+    \field{pages}{273\bibrangedash 297}
+    \field{title}{Support-vector networks}
+    \field{volume}{20}
+    \field{journaltitle}{Machine Learning}
+    \field{year}{1995}
+  \endentry
+
+  \entry{bib:ma2022}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MY}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Yuxuan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Tianyang},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=XY}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Yuanfang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Jianfeng},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MYGTXYLJ1}
+    \strng{fullhash}{MYGTXYLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bib/bbab555
+    \endverb
+    \field{number}{2}
+    \field{pages}{bbab555}
+    \field{title}{Deep learning for antimicrobial peptide recognition and
+  design}
+    \field{volume}{23}
+    \field{journaltitle}{Briefings in Bioinformatics}
+    \field{year}{2022}
+  \endentry
+
+  \entry{bib:kohavi1995}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=KR}{%
+         family={Kohavi},
+         familyi={K\bibinitperiod},
+         given={Ron},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KR1}
+    \strng{fullhash}{KR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 14th International Joint Conference on
+  Artificial Intelligence}
+    \field{pages}{1137\bibrangedash 1145}
+    \field{title}{A study of cross-validation and bootstrap for accuracy
+  estimation and model selection}
+    \field{year}{1995}
+  \endentry
+
+  \entry{bib:xu2021}{article}{}
+    \name{author}{4}{}{%
+      {{hash=XJ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Jing},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Chen},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XJLYWCZD1}
+    \strng{fullhash}{XJLYWCZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1093/bib/bbab173
+    \endverb
+    \field{number}{5}
+    \field{pages}{bbab173}
+    \field{title}{Cross-validation strategies for antimicrobial peptide
+  prediction: balancing accuracy and generalization}
+    \field{volume}{22}
+    \field{journaltitle}{Briefings in Bioinformatics}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bib:saito2015}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ST}{%
+         family={Saito},
+         familyi={S\bibinitperiod},
+         given={Takaya},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rehmsmeier},
+         familyi={R\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STRM1}
+    \strng{fullhash}{STRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1371/journal.pone.0118432
+    \endverb
+    \field{number}{3}
+    \field{pages}{e0118432}
+    \field{title}{The precision-recall plot is more informative than the ROC
+  plot when evaluating binary classifiers on imbalanced datasets}
+    \field{volume}{10}
+    \field{journaltitle}{PLOS ONE}
+    \field{year}{2015}
+  \endentry
+
+  \entry{bib:wang2016_prediction}{article}{}
+    \name{author}{10}{}{%
+      {{hash=WP}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Peng},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HL}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LG}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Gao},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=JN}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Ning},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=CX}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Xi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zheng},
+         familyi={Z\bibinitperiod},
+         given={Wenyi},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Bing},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MZ}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Zhe},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Zhijian},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WPHLLGJNCXXJZWLBMZCZ1}
+    \strng{fullhash}{WPHLLGJNCXXJZWLBMZCZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1186/s12859-015-0850-9
+    \endverb
+    \field{number}{1}
+    \field{pages}{S9}
+    \field{title}{Prediction of antimicrobial peptides based on sequence
+  alignment and support vector machine}
+    \field{volume}{17}
+    \field{journaltitle}{BMC Bioinformatics}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:goodfellow2016}{book}{}
+    \name{author}{3}{}{%
+      {{hash=GI}{%
+         family={Goodfellow},
+         familyi={G\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Courville},
+         familyi={C\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{GIBYCA1}
+    \strng{fullhash}{GIBYCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-0262035613}
+    \field{title}{Deep Learning}
+    \list{location}{1}{%
+      {Cambridge, MA}%
+    }
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:rashid2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RM}{%
+         family={Rashid},
+         familyi={R\bibinitperiod},
+         given={Muhammad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yijun},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZY}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Yuzhen},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RMWYZY1}
+    \strng{fullhash}{RMWYZY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1016/j.csbj.2021.08.044
+    \endverb
+    \field{pages}{4502\bibrangedash 4512}
+    \field{title}{Deep learning in peptide sciences: Opportunities and
+  challenges}
+    \field{volume}{19}
+    \field{journaltitle}{Computational and Structural Biotechnology Journal}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bib:zhang2014}{book}{}
+    \name{author}{2}{}{%
+      {{hash=ZML}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Min-Ling},
+         giveni={M\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=ZZH}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Zhi-Hua},
+         giveni={Z\bibinithyphendelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{ZMLZZH1}
+    \strng{fullhash}{ZMLZZH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-3-642-41145-0}
+    \field{title}{Learning Multi-label Classification from Data}
+    \list{location}{1}{%
+      {Berlin}%
+    }
+    \field{year}{2014}
+  \endentry
+
+  \entry{bib:bhadra2018}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BP}{%
+         family={Bhadra},
+         familyi={B\bibinitperiod},
+         given={Priyanka},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=YJ}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Jin},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Jingfen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=FS}{%
+         family={Fong},
+         familyi={F\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Siu},
+         familyi={S\bibinitperiod},
+         given={Sam},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BPYJLJFSSS1}
+    \strng{fullhash}{BPYJLJFSSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41598-018-19752-w
+    \endverb
+    \field{number}{1}
+    \field{pages}{1697}
+    \field{title}{AmPEP: Sequence-based prediction of antimicrobial peptides
+  using distribution patterns of amino acid properties and random forest}
+    \field{volume}{8}
+    \field{journaltitle}{Scientific Reports}
+    \field{year}{2018}
+  \endentry
+
+  \entry{bib:hsu2002}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=HCW}{%
+         family={Hsu},
+         familyi={H\bibinitperiod},
+         given={Chih-Wei},
+         giveni={C\bibinithyphendelim W\bibinitperiod},
+      }}%
+      {{hash=LCJ}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Chih-Jen},
+         giveni={C\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HCWLCJ1}
+    \strng{fullhash}{HCWLCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{IEEE Transactions on Neural Networks}
+    \verb{doi}
+    \verb 10.1109/72.991427
+    \endverb
+    \field{number}{2}
+    \field{pages}{415\bibrangedash 425}
+    \field{title}{A comparison of methods for multi-class support vector
+  machines}
+    \field{volume}{13}
+    \field{year}{2002}
+  \endentry
+
+  \entry{bib:kumar2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KP}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Pradeep},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KJN}{%
+         family={Kizhakkedathu},
+         familyi={K\bibinitperiod},
+         given={Jayachandran\bibnamedelima N.},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=SSK}{%
+         family={Straus},
+         familyi={S\bibinitperiod},
+         given={Suzanna\bibnamedelima K.},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KPKJNSSK1}
+    \strng{fullhash}{KPKJNSSK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/s41573-020-00144-3
+    \endverb
+    \field{number}{5}
+    \field{pages}{321\bibrangedash 347}
+    \field{title}{Antimicrobial peptides in human disease: Therapeutic
+  potential and development challenges}
+    \field{volume}{20}
+    \field{journaltitle}{Nature Reviews Drug Discovery}
+    \field{year}{2021}
+  \endentry
+
+  \entry{bib:book}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Publisher}%
+    }
+    \strng{namehash}{SNSN1}
+    \strng{fullhash}{SNSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{83-204-3229-9-434}
+    \field{title}{Title of a book}
+    \list{location}{1}{%
+      {Hong Kong}%
+    }
+    \field{year}{2017}
+  \endentry
+
+  \entry{bib:article}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNSN1}
+    \strng{fullhash}{SNSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{1092\bibrangedash 1113}
+    \field{title}{Title of an article in a journal}
+    \field{volume}{157}
+    \field{journaltitle}{Journal Title}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bib:conference}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNSNSN1}
+    \strng{fullhash}{SNSNSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Conference title}
+    \field{pages}{5346\bibrangedash 5349}
+    \field{title}{Title of a conference article}
+    \field{year}{2006}
+  \endentry
+
+  \entry{bib:internet}{online}{}
+    \name{author}{3}{}{%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={Name},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Surname},
+         familyi={S\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNSNSN1}
+    \strng{fullhash}{SNSNSN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Title of a web page}
+    \verb{url}
+    \verb http://somewhere/on/the/internet.html
+    \endverb
+    \field{year}{2021}
+    \field{urlday}{30}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
+  \endentry
+\enddatalist
+\endinput
