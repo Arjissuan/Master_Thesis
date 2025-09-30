@@ -800,7 +800,49 @@ The transition from binary to multi-class prediction reflects a growing emphasis
 
 \chapter{Methods}
 
-\section{}
+\section{Input database}
+Input dataset origins from three different AMP databases: DRAMP, DBAASP, APD
+
+\section{Feature description}
+Observations are described by following features: 
+1. One hot encoding-localisation(?)
+2. calculations of aminoacid frequencies and their normalisation to fractions
+3. convert proteins/peptides to one hot encoding
+
+\section{Labels, AMP targets}
+Each record in the input dataset is described by xyz classes. They can be described as…
+
+\section{Data exploration}
+1. statistical test for lenghts
+2. dataset balance
+3. Statistics for numerical features, statitiasc as follow skewness, median, mean, standard deviation, mode
+4. Performed normalcy test, Shapiro Wilk and kolgomorow-smirnoff in order to check whether variables are from normal distribution
+5. Performed Lavene Test of variance homgenity, lavene becauese data is not from normal distribution.
+6. Performed multiple testing correction and checked effect size of variables to determine if variables are associated in any capacity with label(one of explanatory variables)
+7. Performed Spearman correlation and visualised it on plot.
+
+\section{Data division}
+To divide the input dataset into test and train set of data I used k-fold cross validation
+
+\section{Feature engineering}
+To create model I had to select the discriminative set of features.
+1. Aminoacid frequecies
+2. Physicochemical properties
+3. Evolutionary data
+
+\section{Machine Learning methods comparison}
+In this study i have surveyed performance of four machine learning models and one deeplearning model
+
+\section{Evaluation}
+In this part I write about evaluation of  xyz, xyz and xyz results.
+1. Crossvalidation
+I performed crossvalidation to evaluete results, obtai
+2. Accuracy, precision, f1, recall
+3. confusion matrix
+
+\chapter{Results}
+
+\chapter{Conclusion}
 
 \chapter{[Chapter title]}
 

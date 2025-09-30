@@ -9,12 +9,11 @@ if __name__ == "__main__":
     y = MLD.labels()
     if not os.path.exists("cross_validation_results/"):
         os.mkdir("cross_validation_results")
-    # for index, i in enumerate(X):
-    #     print()
-    #     for j in y.keys():
-    #         pred_df, std_df = KFold(labels=y[j], features=i).cross_validation()
-    #         pred_df.to_csv(f"cross_validation_results/pred_mode_{index}_{j}.csv")
-    #         std_df.to_csv(f"cross_validation_results/std_mode_{index}_{j}.csv")
+    for index, i in enumerate(X):
+        for j in y.keys():
+            pred_df, std_df = KFold(labels=y[j], features=i).cross_validation()
+            pred_df.to_csv(f"cross_validation_results/pred_mode_{index}_{j}.csv")
+            std_df.to_csv(f"cross_validation_results/std_mode_{index}_{j}.csv")
 
 
 

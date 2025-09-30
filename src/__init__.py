@@ -4,6 +4,8 @@ from src.MachineLearningData import ML_data
 from src.statistical_module import StatisticalModule
 from src.LearningData import LData
 from src.CrossValidationModule import KFold
+from src.DL_evaluation import deep_learning_evaluate_model
+from src.DL_models import PeptideCNN, PeptideLinear
 
 __all__ = [
     "ML_data",
@@ -13,5 +15,8 @@ __all__ = [
     "StatisticalModule",
     "LData",
     "DLDataSplit",
-    "KFold"
+    "KFold",
+    "deep_learning_evaluate_model",
+    "PeptideLinear",
+    "PeptideCNN"
     ]

@@ -8,7 +8,7 @@ from typing import List
 
 
 class KFold:
-    def __init__(self, labels:pd.Series, features:pd.DataFrame, n=10, t=0.7, r=42, m=2, ):
+    def __init__(self, labels:pd.Series, features:pd.DataFrame, n=10, t=0.7, r=42):
         """
         Initilization gives ready to use data for cross validation,
         which can be performed using already implemented method.
@@ -16,20 +16,18 @@ class KFold:
         :param n: number of splits
         :param t: train size
         :param r: random state
-        :param m: features mode look into, mode are sets of features, there are 4 sets numbered 1 to 4
         """
         super().__init__()
         self.models = Models()
-        self.cross_val_data = self.data_split(n, t, r, m, labels, features)
+        self.cross_val_data = self.data_split(n, t, r, labels, features)
 
 
-    def data_split(self, n:int, t:float, r:int, m:int, lbls:pd.Series, feat: pd.DataFrame)->List:
+    def data_split(self, n:int, t:float, r:int, lbls:pd.Series, feat: pd.DataFrame)->List:
         """
         Splits data for cross validation
         :param n: number of splits
         :param t: train size
         :param r: random state
-        :param m: features mode look into, mode are sets of features, there are 4 sets numbered 1 to 4
         :param lbls: which class used for classification
         :return: splitted data ready for cross-validaiton
         """
