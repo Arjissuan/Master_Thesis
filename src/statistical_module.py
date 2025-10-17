@@ -1,181 +1,194 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from scipy import stats
 from scipy.stats import chi2_contingency, mannwhitneyu
-import matplotlib.patheffects as path_effects
-import seaborn as sn
-from src.MachineLearningData import ML_data
-from sklearn.feature_selection import RFE
+
 
 class StatisticalModule:
+    """
+    Comprehensive statistical analysis module for mixed-type biological datasets.
 
-    def __init__(self, data: pd.DataFrame, label: pd.Series, alfa=0.05) -> None:
-        """
+    Features:
+        - Automatic identification of categorical, binary, and numerical variables
+        - Descriptive statistics per variable
+        - Normality testing (Shapiro–Wilk)
+        - Homogeneity of variances (Levene’s test)
+        - Multiple testing correction (Bonferroni, Sidak, Benjamini–Hochberg)
+        - Effect size estimation (Wendt’s A via Mann–Whitney U)
+        - Spearman correlation for feature redundancy analysis
+        - Optional summary report aggregation
+    """
 
-        :param data: Dataframe of relevant features
-        :param label: Series of label that you want to test
-        :param alfa: alfa, set to 0.05
-        """
-        self.data = data #
-        self.label = label # explanatory variable
-        self.categorical = self.data.loc[:, self.data.dtypes==object].columns
-        self.numerical = self.data.loc[:, (self.data.dtypes!=object) & np.logical_not(self.data.isin([0,1]).all())].columns
-        self.binary = self.data.loc[:, (self.data.dtypes!=object) & (self.data.isin([0,1]).all())].columns
-        self.alfa = alfa
-        self.m = len(self.numerical)
+    def __init__(self, data: pd.DataFrame, label: pd.Series, alpha: float = 0.05):
+        self.data = data.copy()
+        self.label = label
+        self.alpha = alpha
 
-    def RecursiveFeatureElimination(self):
-        return None
+        # Variable type identification
+        self.categorical = self.data.select_dtypes(include=["object"]).columns.tolist()
+        self.binary = [
+            col for col in self.data.select_dtypes(exclude=["object"]).columns
+            if set(self.data[col].unique()) <= {0, 1}
+        ]
+        self.numerical = [
+            col for col in self.data.columns
+            if col not in self.categorical + self.binary
+        ]
 
-    def UnivariateFeatureSelection(self):
-        return NotImplemented
+        self.m = len(self.numerical)  # number of numeric features
 
+    # ---------------------------------------------------------------------- #
+    #  Descriptive statistics
+    # ---------------------------------------------------------------------- #
+    def descriptive_statistics(self) -> pd.DataFrame:
+        stats_df = pd.DataFrame({
+            'Mean': self.data[self.numerical].mean(),
+            'Median': self.data[self.numerical].median(),
+            'Mode': self.data[self.numerical].mode().iloc[0],
+            'Variance': self.data[self.numerical].var(),
+            'StdDev': self.data[self.numerical].std(),
+            'Skewness': self.data[self.numerical].skew(),
+            'Kurtosis': self.data[self.numerical].kurt()
+        })
+        return stats_df.round(4)
 
-    def DescriptiveStatistics(self):
-        statistic_df = pd.DataFrame([self.data.skew(axis='columns'),
-                                  self.data.mean(axis='columns'),
-                                  self.data.mode(axis='columns'),
-                                  self.data.median(axis='columns'),
-                                  self.data.var(axis='columns'),
-                                  self.data.std(axis='columns'),
-                                  ], index=["Skewness",
-                                            'Mode',
-                                            'Median',
-                                            'Variance',
-                                            'Standard Deviation'])
-        return NotImplemented
+    # ---------------------------------------------------------------------- #
+    #  Normality test
+    # ---------------------------------------------------------------------- #
+    def shapiro_wilk(self) -> pd.DataFrame:
+        results = []
+        for col in self.numerical:
+            stat, p = stats.normaltest(self.data[col])
+            results.append({
+                'Variable': col,
+                'Statistic': stat,
+                'p-value': p,
+                'Normality': 'Normal' if p > self.alpha else 'Non-normal'
+            })
+        return pd.DataFrame(results)
 
-    #Normalcy
-    def ShapiroWilk(self):
-        """
-        h0: Data is from normal distribution
-        ha: Data is not from normal distribution
-        """
-        results = stats.shapiro(self.data.loc[:, self.numerical], axis=0)
-        nomralcy_table = pd.DataFrame(data=results, columns=self.numerical, index=['statistic', 'pvalue']).T
-        Intepret = list(map(lambda x: ("h0 embraced" if x > self.alfa else "rejected h0"), nomralcy_table['pvalue']))
-        nomralcy_table["Intepret"] = Intepret
-        return nomralcy_table
+    # ---------------------------------------------------------------------- #
+    #  Homogeneity of variances (Levene)
+    # ---------------------------------------------------------------------- #
+    def levene_test(self) -> pd.DataFrame:
+        results = []
+        for col in self.numerical:
+            group0 = self.data[self.label == 0][col]
+            group1 = self.data[self.label == 1][col]
+            if len(group0) > 1 and len(group1) > 1:
+                stat, p = stats.levene(group0, group1)
+                results.append({
+                    'Variable': col,
+                    'Statistic': stat,
+                    'p-value': p,
+                    'Equal Variance': 'Yes' if p > self.alpha else 'No'
+                })
+        return pd.DataFrame(results)
 
-    def KolmogorowSmirnof(self):
-        """
-        h0: Data is from normal distribution
-        ha: Data is not from normal distribution
-        """
-        result = stats.kstest(self.data.loc[:, self.numerical], 'norm', axis=0)
-        normalcy_table = pd.DataFrame(data=result, columns=self.numerical, index=['statistic', 'pvalue']).T
-        Intepret = list(map(lambda x: ("h0 embraced" if x > self.alfa else "rejected h0"), normalcy_table['pvalue']))
-        normalcy_table["Intepret"] = Intepret
-        return normalcy_table
-
-    #checking variance equality
-    def lavene(self):
-        """
-        Use when data is not from normal distribution
-        h0: All imput samples are from populations with equal variances
-        ha: Not all imput samples are from populations with equal variances
-        :return:
-        """
-        result = {}
-        for i in self.numerical:
-            for j in self.numerical:
-                if i != j:
-                    result[f"{i}_{j}"] = stats.levene(self.data.loc[:, i], self.data.loc[:, j])
-        lav_df = pd.DataFrame(result, index=["Satistic", "pvalue"]).T
-        lav_df["Interpretation"] = list(map(lambda x:("Failed to reject h0" if x>self.alfa else "rejceted h0"), lav_df["pvalue"]))
-        return lav_df
-
-    #Multiple testing correction
-    def bonferroni(self, p):
-        return min(p*self.m, 1.0)
-
-    def sidek(self,p):
-        return 1-(1-p)**self.m
-
-    def MultipleTestingCorrection(self):
-        """
-        h0: The variable is not associated with explanatory variable
-        :return: The variable is associated with explanatory variable
-        """
+    # ---------------------------------------------------------------------- #
+    #  Multiple testing correction
+    # ---------------------------------------------------------------------- #
+    def multiple_testing_correction(self) -> pd.DataFrame:
         p_values = []
-        for variable in self.numerical:
-            contigency_table = pd.crosstab(self.data[variable] > self.data[variable].mean(), self.label)
-            _, p, __, ___ = chi2_contingency(contigency_table)
+        for var in self.numerical:
+            cont = pd.crosstab(self.data[var] > self.data[var].mean(), self.label)
+            _, p, _, _ = chi2_contingency(cont)
             p_values.append(p)
-        assert len(p_values) == len(self.numerical), "not equal"
-        bonferroni_corected = list(map(self.bonferroni, p_values))
-        sidak_corrected = list(map(self.sidek, p_values))
 
         results = pd.DataFrame({
             'Variable': self.numerical,
-            'Uncorrected p': p_values,
-            "Bonferroni corrected": bonferroni_corected,
-            "Sidak corrected": sidak_corrected,
+            'Uncorrected p': p_values
         })
+
+        results['Bonferroni'] = np.minimum(results['Uncorrected p'] * self.m, 1.0)
+        results['Sidak'] = 1 - (1 - results['Uncorrected p']) ** self.m
+
+        # Benjamini–Hochberg FDR
         results = results.sort_values("Uncorrected p").reset_index(drop=True)
         results['Rank'] = np.arange(1, self.m + 1)
-        results["Benjamini-Hochberg corrected"] = results['Uncorrected p'] * self.m / results['Rank']
-        results["Benjamini-Hochberg corrected"] = np.minimum.accumulate(results["Benjamini-Hochberg corrected"][::-1])[
-                                                  ::-1]
-        results = results.sort_values("Rank").drop(columns=['Rank']).reset_index(drop=True)
-        return results
+        results['Benjamini–Hochberg'] = (
+            results['Uncorrected p'] * self.m / results['Rank']
+        ).clip(upper=1.0)
+        results['Benjamini–Hochberg'] = np.minimum.accumulate(
+            results['Benjamini–Hochberg'][::-1]
+        )[::-1]
 
-    def EffectSize(self):
-        effect_sizes = []
-        # Calculate Wendt's A-value for each variable
-        for variable in self.numerical:
-            group_yes = self.data[self.label== 1][variable]
-            group_no = self.data[self.label == 0][variable]
+        return results.sort_values("Variable").reset_index(drop=True)
 
-            # Perform Mann-Whitney U test
-            u_statistic, _ = mannwhitneyu(group_yes, group_no, alternative="two-sided")
-            n1 = len(group_yes)
-            n2 = len(group_no)
-            wendt_a = 1 - ((2 * min(u_statistic, (n1 * n2 - u_statistic))) / (n1 * n2)) if n1 > 0 and n2 > 0 else None
+    # ---------------------------------------------------------------------- #
+    #  Effect size (Wendt’s A via Mann–Whitney U)
+    # ---------------------------------------------------------------------- #
+    def effect_size(self, show_plot=True) -> pd.DataFrame:
+        results = []
+        for var in self.numerical:
+            g1 = self.data[self.label == 1][var]
+            g0 = self.data[self.label == 0][var]
+            if len(g1) > 0 and len(g0) > 0:
+                u, _ = mannwhitneyu(g1, g0, alternative='two-sided')
+                n1, n2 = len(g1), len(g0)
+                wendt_a = 1 - ((2 * min(u, n1 * n2 - u)) / (n1 * n2))
+                results.append({'Variable': var, 'Effect Size (A)': wendt_a})
 
-            effect_sizes.append({"Variable": variable, "Effect_Size": wendt_a})
+        df = pd.DataFrame(results)
 
-        results_df = pd.DataFrame(effect_sizes)
+        if show_plot:
+            plt.figure(figsize=(9, 5))
+            plt.bar(df["Variable"], df["Effect Size (A)"], color="skyblue")
+            plt.axhline(0.1, color="green", ls="--", lw=2)
+            plt.axhline(0.3, color="#adac3c", ls="--", lw=2)
+            plt.axhline(0.5, color="orange", ls="--", lw=2)
+            plt.axhline(0.7, color="red", ls="--", lw=2)
+            plt.xticks(rotation=45, ha='right')
+            plt.ylabel("Wendt's A")
+            plt.title("Effect Size per Variable")
+            plt.tight_layout()
+            plt.show()
 
-        plt.figure(figsize=(8, 5))
-        plt.bar(results_df["Variable"], results_df["Effect_Size"], color="skyblue")
-        plt.axhline(y=0.1, color="green", linestyle="--", linewidth=3)
-        plt.axhline(y=0.3, color="#adac3c", linestyle="--", linewidth=3)
-        plt.axhline(y=0.5, color="orange", linestyle="--", linewidth=3)
-        plt.axhline(y=0.7, color="red", linestyle="--", linewidth=3)
+        return df.round(4)
 
-        # Add text with black outline
-        def add_outlined_text(x, y, text, color, fontsize):
-            t = plt.text(x, y, text, color=color, fontsize=fontsize, ha='right', path_effects=[
-                path_effects.Stroke(linewidth=0.4, foreground="black"),
-                path_effects.Normal()
-            ])
-            return t
+    # ---------------------------------------------------------------------- #
+    #  Spearman rank correlation (collinearity check)
+    # ---------------------------------------------------------------------- #
+    def spearman_correlation(self, threshold: float = 0.85, show_heatmap=True) -> pd.DataFrame:
+        corr = self.data[self.numerical].corr(method='spearman')
 
-        add_outlined_text(len(results_df["Variable"]) - 0.5, 0.1 + 0.01, "Small effect size", "green", 15)
-        add_outlined_text(len(results_df["Variable"]) - 0.5, 0.3 + 0.01, "Medium effect size", "#adac3c", 15)
-        add_outlined_text(len(results_df["Variable"]) - 0.5, 0.5 + 0.01, "Large effect size", "orange", 15)
-        add_outlined_text(len(results_df["Variable"]) - 0.5, 0.7 + 0.01, "Very large effect size", "red", 15)
+        if show_heatmap:
+            plt.figure(figsize=(8, 6))
+            sns.heatmap(corr, cmap="coolwarm", annot=True, fmt=".2f")
+            plt.title("Spearman Rank Correlation Heatmap")
+            plt.tight_layout()
+            plt.show()
 
-        plt.title("Wendt's A Effect Size for Variables Grouped by 'RainTomorrow'", fontsize=16)
-        plt.ylabel("Effect Size (A-value)", fontsize=16)
-        plt.xlabel("Variables", fontsize=16)
-        plt.ylim(0, 1)
-        plt.legend()
-        plt.show()
+        high_corr = [
+            (i, j, corr.loc[i, j])
+            for i in corr.columns
+            for j in corr.columns
+            if i < j and abs(corr.loc[i, j]) > threshold
+        ]
+        redundant = pd.DataFrame(high_corr, columns=['Feature 1', 'Feature 2', 'Spearman ρ'])
+        return redundant.sort_values('Spearman ρ', ascending=False).reset_index(drop=True)
 
-        return results_df
+    # ---------------------------------------------------------------------- #
+    #  Summary Report
+    # ---------------------------------------------------------------------- #
+    def summary_report(self) -> pd.DataFrame:
+        desc = self.descriptive_statistics()
+        norm = self.shapiro_wilk().set_index('Variable')
+        var = self.levene_test().set_index('Variable')
+        eff = self.effect_size(show_plot=False).set_index('Variable')
 
-    def Corelations(self):
-        corr_matrix = self.data.loc[:, self.numerical].corr()
-        sn.heatmap(corr_matrix, cmap="YlGnBu", annot=True)
-        plt.show()
+        # Rename columns to avoid collisions
+        norm = norm.rename(columns={'p-value': 'Normality p-value'})
+        var = var.rename(columns={'p-value': 'Levene p-value'})
 
+        summary = desc.join(
+            [norm[['Normality p-value', 'Normality']],
+             var[['Levene p-value', 'Equal Variance']],
+             eff[['Effect Size (A)']]],
+            how='left'
+        )
 
-if __name__ == "__main__":
-    mld = ML_data()
-    SM = StatisticalModule(mld.features(4), mld.labels()[0], )
-    print(SM.numerical, SM.label)
-    SM.EffectSize()
-    SM.Corelations()
+        return summary.round(4)
+

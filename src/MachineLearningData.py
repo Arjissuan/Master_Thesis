@@ -11,7 +11,7 @@ class ML_data(LData):
         :return: Specified dataset
         """
         v_sets = [["Aliphatic", "Aromatic", "NonPolar", "Polar", "Charged", "Basic", "Acidic"],
-                  ['Kingdom', 'Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)', 'Class'],
+                  ['Kingdom', 'Celularity (Sing, Mult)', 'Tissue (Yes, No)', 'Mesoderm (Yes, NO)', 'Mouthparts(Pro-Deuter)', 'Phyllum', 'Class'],
                   ['Alanine', 'Arginine', 'Asparagine', 'Aspartic_Acid', 'Cysteine', 'Glutamic_Acid', 'Glutamine', 'Glycine', 'Histidine', 'Isoleucine', 'Leucine', 'Lysine', 'Mathionine', 'Phenylalanine', 'Proline', 'Serine', 'Threonine', 'Tryptophan', 'Tyrosine', 'Valine',]]
                 #is organism is multi celled   #does it have tissues   #does it make mesoderm and stuff #third options informs if its not natural, maybe its better to not include them?
         temp = []

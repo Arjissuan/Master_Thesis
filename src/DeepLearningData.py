@@ -46,7 +46,7 @@ class DLDataSplit:
         self.max_len = max_len
 
     def __splitting(self, X, y):
-        X_train, X_test, y_train, y_test = train_test_split(X=X, y=y, test_size=0.1, random_state=42, stratify=y)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42, stratify=y)
 
         return X_train, y_train, X_test, y_test
 
@@ -77,4 +77,5 @@ class DLDataSplit:
 
 
 # seqs = ["ARN", "DCE"]
+# DL = DL_data()
 # print(torch.stack(list(map(lambda x: torch.tensor(DL.one_hot_encode_sequence(x)), seqs))))

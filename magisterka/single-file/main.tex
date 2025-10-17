@@ -800,8 +800,55 @@ The transition from binary to multi-class prediction reflects a growing emphasis
 
 \chapter{Methods}
 
-\section{Input database}
-Input dataset origins from three different AMP databases: DRAMP, DBAASP, APD
+
+\section{Creation of input database}
+The predictive performance of machine learning models heavily depends on the quality and representativness of the input data. In this study, the dataset used for training and
+evaluating AMP prediction models was constructed from multiple publicly avaible AMP databases and underwent several stages of preprocessing, merging, and manual curation.
+Dataset creation pipeline can be illustrated as follows:
+
+\subsection{Source Databases}
+Three major AMP repositories were utilized as primary data sources: the Antimicrobial Peptide Database (APD), 
+the Database of Antimicrobial Activity and Structure of Peptides (DBAASP), 
+and the Database of Research on Antimicrobial Peptides (DRAMP). 
+These databases collectively represent the most comprehensive and up-to-date resources for experimentally validated AMP sequences.
+\begin{itemize}
+	\item APD provides manually curated information about naturally occurring AMPs, including sequence, length, source organism, and activity profile\cite[bib:wang2016apd]
+	\item DBAASP contains quantitative activity data and structural annotations, making it especially useful for feature extraction and benchmarking of peptide bioactivity \cite[bib:pirtskhalava2021]
+	\item DRAMP integrates data from literature and patents, focusing on therapeutic applications, structure-function relationships, and physicochemical descriptors\cite[bib:fan2016]
+\end{itemize}
+Using the Python programming language, all available AMP sequences and their associated metadata were downloaded programmatically. 
+A total of 2068 sequences were obtained from APD, 2974 from DBAASP, and 5084 from DRAMP.
+
+\subsection{Data Integration and Feature Calculation}
+Following data acquisition, the sequences were merged into a single dataset. This step was performed by the Tunneling Group led by PhD Artur Góra at the Silesian University of Technology. 
+The integrated dataset was subsequently enriched with additional physicochemical features computed using the Peptides library\cite[bib:osorio2015] in the R programming language \cite[bib:rteam2022].
+After the feature calculation stage, the unified dataset consisted of 6545 annotated peptide sequences described by 118 features spread across 50 columns. The features included amino acid composition, physicochemical properties (e.g., charge, hydrophobicity, molecular weight), and biological descriptors related to evolutionary origin and cellular characteristics.
+
+A small number of entries contained missing values in individual cells, primarily due to incomplete data in the original repositories. 
+As these omissions were marginal, such records were excluded from further analysis to maintain dataset integrity.
+
+The resulting dataset served as the foundation for all subsequent experiments presented in this thesis. 
+A detailed summary of the input dataset is shown in Table 2.1.
+
+\subsection{Dataset Characteristics and Class Structure}
+The original dataset contained 44 unique activity labels, corresponding to different reported biological targets. 
+These labels were highly unbalanced, with some representing only a handful of peptides. 
+To facilitate meaningful machine learning analysis, the 44 original classes were merged into 5 major categories based on biological function and activity spectrum:
+
+
+
+This restructuring ensured a more balanced distribution of samples across categories and simplified the multi-class prediction task.
+After aggregation, the five major functional classes became the prediction targets for all models discussed in Chapter 3.
+
+\subsection{}
+The dataset created by the Tunneling Group was partially manually curated, 
+which introduced several inconsistencies and typographical errors in categorical columns (e.g., inconsistent case formatting, duplicate category names differing by one character).
+These errors were systematically corrected through manual inspection to prevent redundant categorical values and ensure accurate encoding during model training.
+
+Additionally, column selection was refined to include only relevant features. Redundant identifiers, metadata fields unrelated to sequence or biological activity, and textual descriptors were excluded. 
+The resulting dataset achieved an improved balance among classes, with representation percentages adjusted to reflect the true diversity of peptide activity types.
+
+The final input dataset—curated, standardized, and biologically consistent—served as a robust foundation for training and comparing the predictive machine learning models described in subsequent chapters.
 
 \section{Feature description}
 Observations are described by following features: 
@@ -811,6 +858,8 @@ Observations are described by following features:
 
 \section{Labels, AMP targets}
 Each record in the input dataset is described by xyz classes. They can be described as…
+
+
 
 \section{Data exploration}
 1. statistical test for lenghts

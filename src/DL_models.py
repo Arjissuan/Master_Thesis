@@ -9,7 +9,8 @@ class PeptideCNN(nn.Module):
             nn.Conv2d(1, num_filters, kernel_size=(kernel_size, vocab_size)),
             nn.ReLU(inplace=True),
             nn.Flatten(),
-            nn.Linear(num_filters * (seq_len - kernel_size + 1), num_classes)
+            nn.Linear(num_filters * (seq_len - kernel_size + 1), num_classes),
+            nn.Sigmoid()
         )
 
     def forward(self, xb):

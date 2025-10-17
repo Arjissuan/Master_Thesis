@@ -8,7 +8,7 @@ from typing import List
 
 
 class KFold:
-    def __init__(self, labels:pd.Series, features:pd.DataFrame, n=10, t=0.7, r=42):
+    def __init__(self, labels:pd.Series, features:pd.DataFrame, n=10, t=0.9, r=42):
         """
         Initilization gives ready to use data for cross validation,
         which can be performed using already implemented method.

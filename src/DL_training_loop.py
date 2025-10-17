@@ -5,7 +5,7 @@ import torch.nn as nn
 def loss_batch(model, loss_func, xb, yb, opt=None):
     # Forward pass
     xb_out = model(xb.float())  # logits, shape (batch, num_classes)
-    loss = loss_func(xb_out, yb)  # yb: (batch,), long
+    loss = loss_func(xb_out, yb.float())  # yb must be float for BCEWithLogitsLoss
 
     # Backprop
     if opt is not None:
@@ -13,13 +13,12 @@ def loss_batch(model, loss_func, xb, yb, opt=None):
         loss.backward()
         opt.step()
 
-    # Compute accuracy
-    preds = torch.argmax(xb_out, dim=1)
-    correct = (preds == yb).sum().item()
-    acc = correct / len(yb)
+    # Compute accuracy (elementwise match)
+    preds = (torch.sigmoid(xb_out) > 0.5).int()
+    correct = (preds == yb.int()).sum().item()
+    acc = correct / yb.numel()
 
     return loss.item(), acc, len(xb)
-
 
 
 def train_step(model, train_dl, loss_func, device, opt):
@@ -50,10 +49,11 @@ def val_step(model, val_dl, loss_func, device):
     val_acc = np.sum(accs) / np.sum(ns)
     return val_loss, val_acc
 
+
 def fit(epochs, model, loss_func, opt, train_dl, val_dl, device):
     history = {"train_loss": [], "val_loss": [], "train_acc": [], "val_acc": []}
 
-    for epoch in range(epochs):
+    for epoch in range(1, epochs+1):
         train_loss, train_acc = train_step(model, train_dl, loss_func, device, opt)
         val_loss, val_acc = val_step(model, val_dl, loss_func, device)
 
@@ -62,7 +62,7 @@ def fit(epochs, model, loss_func, opt, train_dl, val_dl, device):
         history["train_acc"].append(train_acc)
         history["val_acc"].append(val_acc)
 
-        print(f"E{epoch} | "
+        print(f"Epoch {epoch}/{epochs} | "
               f"train loss: {train_loss:.3f} acc: {train_acc:.3f} | "
               f"val loss: {val_loss:.3f} acc: {val_acc:.3f}")
 
@@ -71,6 +71,6 @@ def fit(epochs, model, loss_func, opt, train_dl, val_dl, device):
 
 def run_model(train_dl, val_dl, model, device, lr=1e-3, epochs=50, opt=None, lossf=None):
     optimizer = opt or torch.optim.Adam(model.parameters(), lr=lr)
-    loss_func = lossf or nn.CrossEntropyLoss()
+    loss_func = lossf or nn.BCEWithLogitsLoss()
     history = fit(epochs, model, loss_func, optimizer, train_dl, val_dl, device)
     return history

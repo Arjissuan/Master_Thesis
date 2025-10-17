@@ -3,6 +3,7 @@ from typing import Dict
 
 class LData:
     def __init__(self) -> None:
+        self.features_df_statistical = None
         self.features_df = pd.read_csv("../ML_AMP_features.csv", sep=',', index_col=0)
         self.labels_df = pd.read_csv(filepath_or_buffer="../ML_AMP_labels.csv", sep=',', index_col=0)
         self.na_indexes = self.features_df[(self.features_df.isna() == True).any(axis=1)].index
