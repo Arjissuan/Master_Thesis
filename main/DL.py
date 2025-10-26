@@ -14,33 +14,40 @@ if __name__ == "__main__":
 
     classes = ldata.labels()  # dictionary of series
 
-    labels = list(map(lambda x: [classes["antigram+"][x],
-                                 classes["antigram-"][x],
-                                 classes['antifungal'][x],
-                                 classes['anticancer'][x],
-                                 classes['antivirial'][x]
-                                 ], classes['antigram+'].index))
+    labels = pd.DataFrame(list(map(lambda x: [
+        int(classes["antigram+"][x]),
+        int(classes["antigram-"][x]),
+        int(classes["antifungal"][x]),
+        int(classes["anticancer"][x]),
+        int(classes["antivirial"][x])
+    ], classes["antigram+"].index)))
+
+    labels = labels.astype(int)
+    maximal_lenght = np.max(features.loc[:, 'Length'])
 
 
-
-    # -------------------------------------------------
-    # 2. DataLoaders
-    # -------------------------------------------------
-    splitter = DLDataSplit(features, labels, batch_size=32, max_len=None)
-    train_dl, val_dl, test_dl = splitter.__getitem__()
-    print(train_dl)
+    #
+    # # -------------------------------------------------
+    # # 2. DataLoaders
+    # # -------------------------------------------------
+    splitter = DLDataSplit(X=features, Y=labels, batch_size=32, max_len=maximal_lenght)
+    train_dl, val_dl, test_dl = splitter.get_loaders()
+    # print(train_dl)
+    #
+    #
     # # -------------------------------------------------
     # # 3. Model
     # # -------------------------------------------------
-    # seq_len = train_dl.dataset.seq_len   # dataset knows max_len
-    # num_classes = labels.nunique()       # should be 5
-    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    num_classes = labels.shape[1]
+    print("Final num_classes:", num_classes, type(num_classes))
+    # should be 5
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = PeptideCNN(seq_len=maximal_lenght, num_classes=num_classes, debug=True)
     #
     #
-    # # model = PeptideLinear(seq_len, num_classes=num_classes)
-    # model = PeptideCNN(seq_len, num_classes=num_classes)
-    #
-    # model = model.to(device)
+    model = model.to(device)
     #
     # # -------------------------------------------------
     # # 4. Train model

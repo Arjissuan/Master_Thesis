@@ -1,21 +1,51 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 
 class PeptideCNN(nn.Module):
-    def __init__(self, seq_len, vocab_size=22, num_classes=5, num_filters=32, kernel_size=3):
+    def __init__(self, seq_len, num_classes=5, vocab_size=22, debug=False):
         super().__init__()
-        # input: (batch, 1, seq_len, vocab_size)
-        self.conv_net = nn.Sequential(
-            nn.Conv2d(1, num_filters, kernel_size=(kernel_size, vocab_size)),
-            nn.ReLU(inplace=True),
-            nn.Flatten(),
-            nn.Linear(num_filters * (seq_len - kernel_size + 1), num_classes),
-            nn.Sigmoid()
-        )
+        self.debug = debug
 
-    def forward(self, xb):
-        # xb shape: (batch, 1, seq_len, vocab_size)
-        return self.conv_net(xb)
+        # Convolutional block
+        # Input shape: (batch, 1, seq_len, vocab_size)
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=(3, vocab_size))  # slide over sequence length
+        self.pool = nn.MaxPool1d(2)
+        self.flatten = nn.Flatten()
+
+        # Compute flatten size dynamically
+        with torch.no_grad():
+            dummy = torch.zeros(1, 1, seq_len, vocab_size)
+            dummy_out = self._forward_features(dummy)
+            conv_output_size = dummy_out.view(1, -1).size(1)
+
+        # Fully connected head
+        self.fc = nn.Linear(conv_output_size, num_classes)
+
+        if self.debug:
+            print(f"[DEBUG:init] seq_len={seq_len}, conv_output_size={conv_output_size}")
+
+    def _forward_features(self, x):
+        # x: (batch, 1, seq_len, vocab_size)
+        x = self.conv1(x)       # -> (batch, 32, seq_len-2, 1)
+        x = F.relu(x)
+        x = x.squeeze(-1)       # remove vocab dimension -> (batch, 32, seq_len-2)
+        x = self.pool(x)        # -> (batch, 32, (seq_len-2)//2)
+        return x
+
+    def forward(self, x):
+        x = self._forward_features(x)
+        if self.debug:
+            print(f"[DEBUG:forward] Feature map before flatten: {x.shape}")
+
+        x = self.flatten(x)
+        x = self.fc(x)
+
+        if self.debug:
+            print(f"[DEBUG:forward] Output: {x.shape}")
+
+        return x
+
 
 class PeptideLinear(nn.Module):
     def __init__(self, seq_len, vocab_size=22, num_classes=5):

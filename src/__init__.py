@@ -1,5 +1,5 @@
 from src.ML_models import Models
-from src.DeepLearningData import DL_data, DLDataSplit
+from src.DeepLearningData import DLData, DLDataSplit
 from src.MachineLearningData import ML_data
 from src.statistical_module import StatisticalModule
 from src.LearningData import LData
@@ -10,7 +10,7 @@ from src.DL_models import PeptideCNN, PeptideLinear
 __all__ = [
     "ML_data",
     "Models",
-    "DL_data",
+    "DLData",
     "ML_models",
     "StatisticalModule",
     "LData",

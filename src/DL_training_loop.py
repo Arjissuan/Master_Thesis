@@ -4,7 +4,7 @@ import torch.nn as nn
 
 def loss_batch(model, loss_func, xb, yb, opt=None):
     # Forward pass
-    xb_out = model(xb.float())  # logits, shape (batch, num_classes)
+    xb_out = model(xb)  # logits, shape (batch, num_classes)
     loss = loss_func(xb_out, yb.float())  # yb must be float for BCEWithLogitsLoss
 
     # Backprop
@@ -69,8 +69,8 @@ def fit(epochs, model, loss_func, opt, train_dl, val_dl, device):
     return history
 
 
-def run_model(train_dl, val_dl, model, device, lr=1e-3, epochs=50, opt=None, lossf=None):
+def run_model(train_dl, val_dl, model, device, lr=1e-3, epochs=50, opt=None):
     optimizer = opt or torch.optim.Adam(model.parameters(), lr=lr)
-    loss_func = lossf or nn.BCEWithLogitsLoss()
+    loss_func = nn.BCEWithLogitsLoss()
     history = fit(epochs, model, loss_func, optimizer, train_dl, val_dl, device)
     return history
