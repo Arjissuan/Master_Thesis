@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 class PeptideCNN(nn.Module):
     def __init__(self, seq_len, num_classes=5, vocab_size=22, debug=False):
         super().__init__()
@@ -9,7 +10,7 @@ class PeptideCNN(nn.Module):
 
         # Convolutional block
         # Input shape: (batch, 1, seq_len, vocab_size)
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=(3, vocab_size))  # slide over sequence length
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=(3, vocab_size))
         self.pool = nn.MaxPool1d(2)
         self.flatten = nn.Flatten()
 
@@ -20,7 +21,9 @@ class PeptideCNN(nn.Module):
             conv_output_size = dummy_out.view(1, -1).size(1)
 
         # Fully connected head
-        self.fc = nn.Linear(conv_output_size, num_classes)
+
+        self.fc1 = nn.Linear(conv_output_size, conv_output_size) # 172*32/2
+        self.fc2 = nn.Linear(conv_output_size, num_classes)  # 172*32/2
 
         if self.debug:
             print(f"[DEBUG:init] seq_len={seq_len}, conv_output_size={conv_output_size}")
@@ -39,7 +42,8 @@ class PeptideCNN(nn.Module):
             print(f"[DEBUG:forward] Feature map before flatten: {x.shape}")
 
         x = self.flatten(x)
-        x = self.fc(x)
+        x = self.fc1(x)
+        x = self.fc2(x)
 
         if self.debug:
             print(f"[DEBUG:forward] Output: {x.shape}")

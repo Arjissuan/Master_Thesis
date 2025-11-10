@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 class MatrixOperation:
     def __init__(self):
@@ -67,9 +69,11 @@ class MatrixOperation:
         return sums
 
 
-
 if __name__ == "__main__":
     MO = MatrixOperation()
-    # MO.matrix_conversion().to_csv("ML_AMP_features.csv")
-    # MO.binary_labeling().to_csv('./ML_AMP_labels.csv')
-    print(MO.ranking_of_labels().shape)
+    print(MO.df.isnull().sum())
+
+    print(MO.all_existing_labels())
+    MO.matrix_conversion().to_csv("ML_AMP_features.csv")
+    MO.binary_labeling().to_csv('./ML_AMP_labels.csv')
+    print(MO.ranking_of_labels())

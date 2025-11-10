@@ -44,27 +44,27 @@ if __name__ == "__main__":
     # should be 5
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = PeptideCNN(seq_len=maximal_lenght, num_classes=num_classes, debug=True)
-    #
-    #
+    model = PeptideCNN(seq_len=maximal_lenght, num_classes=num_classes, debug=False)
+
+
     model = model.to(device)
-    #
-    # # -------------------------------------------------
-    # # 4. Train model
-    # # -------------------------------------------------
-    # history = run_model(
-    #     train_dl, val_dl, model, device,
-    #     lr=1e-3,
-    #     epochs=20
-    # )
-    #
-    # # -------------------------------------------------
-    # # 5. Evaluate model
-    # # -------------------------------------------------
-    # class_names = ["Gram+", "Gram-", "Fungi", "Virus", "Cancer"]
-    #
-    # print("\nValidation set performance:")
-    # deep_learning_evaluate_model(model, val_dl, device, class_names)
-    #
-    # print("\nTest set performance:")
-    # deep_learning_evaluate_model(model, test_dl, device, class_names)
+
+    # -------------------------------------------------
+    # 4. Train model
+    # -------------------------------------------------
+    history = run_model(
+        train_dl, val_dl, model, device,
+        lr=1e-3,
+        epochs=20
+    )
+
+    # -------------------------------------------------
+    # 5. Evaluate model
+    # -------------------------------------------------
+    class_names = ["Gram+", "Gram-", "Fungi", "Virus", "Cancer"]
+
+    print("\nValidation set performance:")
+    deep_learning_evaluate_model(model, val_dl, device, class_names)
+
+    print("\nTest set performance:")
+    deep_learning_evaluate_model(model, test_dl, device, class_names)

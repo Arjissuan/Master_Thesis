@@ -39,7 +39,7 @@ def deep_learning_evaluate_model(model, dl, device, class_names=None, threshold=
     # === Save report ===
     csv_path = os.path.join(output_dir, "classification_report.csv")
     report_df.to_csv(csv_path, index=True)
-    print(f"\n📄 Classification report saved to: {csv_path}")
+    print(f"\n Classification report saved to: {csv_path}")
 
     # === Print summary to console ===
     print("\nClassification Report:")
@@ -47,6 +47,7 @@ def deep_learning_evaluate_model(model, dl, device, class_names=None, threshold=
 
     # === Multilabel Confusion Matrices ===
     cms = multilabel_confusion_matrix(all_labels, all_preds)
+    print(cms)
     n_classes = len(class_names)
     fig, axes = plt.subplots(1, n_classes, figsize=(4 * n_classes, 4))
     if n_classes == 1:
@@ -59,5 +60,6 @@ def deep_learning_evaluate_model(model, dl, device, class_names=None, threshold=
         ax.set_ylabel("True")
     plt.tight_layout()
     plt.show()
+
 
     return all_preds, all_labels, report_df

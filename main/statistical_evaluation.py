@@ -26,6 +26,7 @@ effect = stats_module.effect_size()
 # 6. Spearman redundancy
 redundant = stats_module.spearman_correlation(threshold=0.85)
 
+
 # 7. Combined summary report
 summary = stats_module.summary_report()
 summary.to_csv("statistical_evaluation_raport.csv")

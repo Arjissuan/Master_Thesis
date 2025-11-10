@@ -11,7 +11,8 @@ class Models:
         Random Forest Classiefier: 200_10_gini_log2
         Support Vector Machine: 1_sigmoid_scale_0.9_200_5
         """
-        self.mlp = MLPClassifier(hidden_layer_sizes=(64, 16, 8, 4, 2), solver='lbfgs', activation='relu', max_iter=100000, early_stopping=True)
-        self.rfc = RandomForestClassifier(n_estimators=200, criterion="gini", max_depth=10, max_features='log2')
-        self.svc = SVC(C=1, kernel='sigmoid', gamma='scale', coef0=0.9, cache_size=200, degree=5)
+        self.rand_s = 42
+        self.mlp = MLPClassifier(hidden_layer_sizes=(64, 16, 8, 6, 5), solver='lbfgs', activation='relu', max_iter=100000, early_stopping=True, random_state=self.rand_s)
+        self.rfc = RandomForestClassifier(n_estimators=200, criterion="gini", max_depth=10, max_features='log2', random_state=self.rand_s)
+        self.svc = SVC(C=1, kernel='sigmoid', gamma='scale', coef0=0.9, cache_size=200, degree=5, probability=True, random_state=self.rand_s)
         self.bayes = GaussianNB()
